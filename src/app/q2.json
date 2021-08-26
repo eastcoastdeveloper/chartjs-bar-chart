@@ -1,0 +1,21 @@
+{
+  "items" : [
+        {
+              "label": "Goods Sold",
+              "data": [270, 200, 260],
+              "backgroundColor": "#34568B"
+            }, {
+              "label": "Consulting",
+              "data": [140, 190, 180],
+              "backgroundColor": "#FF6F61"
+            }, {
+              "label": "Advertising",
+              "data": [160, 150, 200],
+              "backgroundColor": "#6B5B95"
+            }, {
+              "label": "Investments",
+              "data": [250, 220, 225],
+              "backgroundColor": "#88B04B"
+            }
+        ]
+  }
