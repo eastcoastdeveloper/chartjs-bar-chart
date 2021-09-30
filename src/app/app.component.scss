@@ -5,7 +5,7 @@
   margin: 20px auto 0 auto;
   max-width: 500px;
 
-  p {
+  > p {
     font: normal 14px sans-serif;
     color: #fcdb42;
     margin: 0 0 20px 0;
@@ -136,7 +136,7 @@
   #bar-chart-ui {
     .data-table {
       .headers {
-        margin-left: 90px;
+        margin-left: 83px;
         p {
           font-size: .85em;
         }
