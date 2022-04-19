@@ -1,15 +1,35 @@
 <div id="bar-chart-ui">
-  <p>{{quarter}} Company Profit</p>
+  <p>{{ quarter }} Company Profit</p>
   <div class="filters">
     <div class="btn-group">
-      <button type="button" [ngClass]="{'active-quarter':quarter === 'Q1'}"
-      (click)="loadData(q1, 'Q1')">Q1</button>
-      <button type="button" [ngClass]="{'active-quarter':quarter === 'Q2'}"
-      (click)="loadData(q2, 'Q2')">Q2</button>
-      <button type="button" [ngClass]="{'active-quarter':quarter === 'Q3'}"
-      (click)="loadData(q3, 'Q3')">Q3</button>
-      <button type="button" [ngClass]="{'active-quarter':quarter === 'Q4'}"
-      (click)="loadData(q4, 'Q4')">Q4</button>
+      <button
+        type="button"
+        [ngClass]="{ 'active-quarter': quarter === 'Q1' }"
+        (click)="loadData(q1, 'Q1')"
+      >
+        Q1
+      </button>
+      <button
+        type="button"
+        [ngClass]="{ 'active-quarter': quarter === 'Q2' }"
+        (click)="loadData(q2, 'Q2')"
+      >
+        Q2
+      </button>
+      <button
+        type="button"
+        [ngClass]="{ 'active-quarter': quarter === 'Q3' }"
+        (click)="loadData(q3, 'Q3')"
+      >
+        Q3
+      </button>
+      <button
+        type="button"
+        [ngClass]="{ 'active-quarter': quarter === 'Q4' }"
+        (click)="loadData(q4, 'Q4')"
+      >
+        Q4
+      </button>
     </div>
   </div>
   <canvas id="areaChart"></canvas>
@@ -17,13 +37,13 @@
     <div class="data-table">
       <div>
         <div class="headers">
-          <p *ngFor="let city of data.labels">{{city}}</p>
+          <p *ngFor="let city of data.labels">{{ city }}</p>
         </div>
       </div>
       <div class="services">
         <table class="labels">
           <tr *ngFor="let type of data.datasets">
-            <td>{{type.label}}</td>
+            <td>{{ type.label }}</td>
           </tr>
         </table>
         <!--
@@ -31,16 +51,18 @@
         <table>
           <tbody>
             <tr>
-              <td *ngFor="let goods of data.datasets[0].data">{{goods}} u</td>
+              <td *ngFor="let goods of data.datasets[0].data">{{ goods }} u</td>
             </tr>
             <tr>
-              <td *ngFor="let goods of data.datasets[1].data">{{goods}} hrs</td>
+              <td *ngFor="let goods of data.datasets[1].data">
+                {{ goods }} hrs
+              </td>
             </tr>
             <tr>
-              <td *ngFor="let goods of data.datasets[2].data">{{goods}} u</td>
+              <td *ngFor="let goods of data.datasets[2].data">{{ goods }} u</td>
             </tr>
             <tr>
-              <td *ngFor="let goods of data.datasets[3].data">{{goods}}k</td>
+              <td *ngFor="let goods of data.datasets[3].data">{{ goods }}k</td>
             </tr>
           </tbody>
         </table>

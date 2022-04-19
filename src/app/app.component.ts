@@ -1,4 +1,3 @@
-
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import * as chartData from './data.json';
@@ -9,10 +8,10 @@ import * as q4 from './q4.json';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.scss' ],
+  styleUrls: ['./app.component.scss'],
   host: {
-    '(window:resize)': 'onResize($event)'
-  }
+    '(window:resize)': 'onResize($event)',
+  },
 })
 export class AppComponent implements OnInit {
   dataArray: any = [];
@@ -95,9 +94,7 @@ export class AppComponent implements OnInit {
   }
 
   // Refresh canvas dimensions
-  onResize(event){
+  onResize(event) {
     location.reload();
   }
-
 }
-
