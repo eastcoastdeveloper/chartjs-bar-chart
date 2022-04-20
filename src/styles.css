@@ -1,1 +1,16 @@
-/* Add application styles & imports to this file! */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.website {
+  font: normal 14px sans-serif;
+  letter-spacing: 0.5px;
+  display: block;
+  cursor: pointer;
+  background-color: #313b3f;
+  color: #fcdb42;
+  padding: 10px;
+  text-decoration: none;
+  text-align: right;
+}
