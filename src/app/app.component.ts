@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart } from 'chart.js';
+import { Chart, ChartData } from 'chart.js';
 import * as chartData from './data.json';
 import * as q2 from './q2.json';
 import * as q3 from './q3.json';
@@ -14,7 +14,7 @@ import * as q4 from './q4.json';
   },
 })
 export class AppComponent implements OnInit {
-  dataArray: any = [];
+  dataArray: ChartData[] = [];
   data: any;
   chart: any;
   quarter: string = 'Q1';
@@ -94,7 +94,7 @@ export class AppComponent implements OnInit {
   }
 
   // Refresh canvas dimensions
-  onResize(event) {
-    location.reload();
+  onResize(event:any) {
+    this.chart.render();
   }
 }
