@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
   }
 
   // Refresh canvas dimensions
-  onResize(event:any) {
+  onResize(event: any) {
     this.chart.render();
   }
 }
