@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart, ChartData } from 'chart.js';
+import { Chart } from 'chart.js';
+import { BarInterface } from './data.interface';
 import * as chartData from './data.json';
 import * as q2 from './q2.json';
 import * as q3 from './q3.json';
@@ -14,7 +15,7 @@ import * as q4 from './q4.json';
   },
 })
 export class AppComponent implements OnInit {
-  dataArray: ChartData[] = [];
+  dataArray: BarInterface[] = [];
   data: any;
   chart: any;
   quarter: string = 'Q1';
