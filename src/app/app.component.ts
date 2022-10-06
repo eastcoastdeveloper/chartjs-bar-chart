@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
   q4: any = q4;
 
   ngOnInit() {
-    console.log(chartData);
     let options: any,
       ctx: any = document.getElementById('areaChart') as HTMLElement;
     ctx.style.backgroundColor = '#FFFFFF';
@@ -93,6 +92,7 @@ export class AppComponent implements OnInit {
       this.data.datasets = this.dataArray;
       this.chart.update();
     }
+    console.log(this.dataArray)
   }
 
   // Refresh canvas dimensions
