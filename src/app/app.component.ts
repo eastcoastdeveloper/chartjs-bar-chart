@@ -19,12 +19,13 @@ export class AppComponent implements OnInit {
   data: any;
   chart: any;
   quarter: string = 'Q1';
-  q1: any = chartData.items;
-  q2: any = q2.items;
-  q3: any = q3.items;
-  q4: any = q4.items;
+  q1: any = chartData;
+  q2: any = q2;
+  q3: any = q3;
+  q4: any = q4;
 
   ngOnInit() {
+    console.log(chartData);
     let options: any,
       ctx: any = document.getElementById('areaChart') as HTMLElement;
     ctx.style.backgroundColor = '#FFFFFF';
@@ -82,7 +83,7 @@ export class AppComponent implements OnInit {
   loadData(arr: any, span: any) {
     this.dataArray = [];
     this.quarter = span;
-    arr === null ? (arr = chartData.items) : '';
+    arr === null ? (arr = chartData) : '';
     for (let key in arr) {
       if (arr.hasOwnProperty(key)) {
         this.dataArray.push(arr[key]);
