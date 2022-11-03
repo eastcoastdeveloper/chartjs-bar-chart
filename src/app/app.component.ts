@@ -24,8 +24,6 @@ export class AppComponent implements OnInit {
   q3: any = q3;
   q4: any = q4;
 
-  // constructor(private _http: HttpClient){}
-
   ngOnInit() {
     let options: any,
       ctx: any = document.getElementById('areaChart') as HTMLElement;
