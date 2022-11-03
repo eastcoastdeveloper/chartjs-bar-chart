@@ -1,9 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
-import { Observable } from 'rxjs';
 import { BarInterface } from './data.interface';
-// import * as chartData from './data.json';
+import * as chartData from './data.json';
 import * as q2 from './q2.json';
 import * as q3 from './q3.json';
 import * as q4 from './q4.json';
@@ -21,13 +19,12 @@ export class AppComponent implements OnInit {
   data: any;
   chart: any;
   quarter: string = 'Q1';
-  // chartData
-  q1: any = this.dataArray;
+  q1: any = chartData;
   q2: any = q2;
   q3: any = q3;
   q4: any = q4;
 
-  constructor(private _http: HttpClient){}
+  // constructor(private _http: HttpClient){}
 
   ngOnInit() {
     let options: any,
@@ -87,16 +84,12 @@ export class AppComponent implements OnInit {
   loadData(arr: any, span: any) {
     this.dataArray = [];
     this.quarter = span;
-    // arr === null ? (arr = chartData) : '';
-    this._http.get<BarInterface[]>('assets/data.json').subscribe(val => {
-      this.dataArray = val;
-      console.log(this.dataArray);
-    })
-    // for (let key in arr) {
-    //   if (arr.hasOwnProperty(key)) {
-    //     this.dataArray.push(arr[key]);
-    //   }
-    // }
+    arr === null ? (arr = chartData) : '';
+    for (let key in arr) {
+      if (arr.hasOwnProperty(key)) {
+        this.dataArray.push(arr[key]);
+      }
+    }
     if (arr != null && this.data != undefined) {
       this.data.datasets = this.dataArray;
       this.chart.update();
