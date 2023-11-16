@@ -1,22 +1,17 @@
 [
   {
     "label": "IT",
-    "data": [270, 200, 260],
+    "data": [270, 700, 860],
     "backgroundColor": "#34568B"
   },
   {
     "label": "CR",
-    "data": [140, 190, 180],
+    "data": [540, 890, 780],
     "backgroundColor": "#FF6F61"
   },
   {
     "label": "PR",
-    "data": [160, 150, 200],
+    "data": [560, 450, 700],
     "backgroundColor": "#6B5B95"
-  },
-  {
-    "label": "ROI",
-    "data": [250, 220, 225],
-    "backgroundColor": "#88B04B"
   }
 ]
