@@ -44,32 +44,6 @@ export class AppComponent implements OnInit {
       layout: {
         padding: 5,
       },
-      scales: {
-        xAxes: [
-          {
-            stacked: true,
-            gridLines: {
-              display: true,
-            },
-            ticks: {
-              display: true,
-              fontSize: 12,
-            },
-          },
-        ],
-        yAxes: [
-          {
-            stacked: true,
-            gridLines: {
-              display: true,
-            },
-            ticks: {
-              display: true,
-              fontSize: 12,
-            },
-          },
-        ],
-      },
     };
 
     this.chart = new Chart(ctx, {
@@ -87,6 +61,7 @@ export class AppComponent implements OnInit {
       if (arr.hasOwnProperty(key)) {
         this.dataArray.push(arr[key]);
       }
+      !this.dataArray[key] ? this.dataArray.pop() : '';
     }
     
     if (arr != null && this.data != undefined) {
