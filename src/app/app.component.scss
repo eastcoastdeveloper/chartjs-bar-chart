@@ -3,6 +3,7 @@
   background-color: #313b3f;
   padding: 10px;
   margin: 20px auto 0 auto;
+  max-width: 450px;
 
   > p {
     font: normal 14px sans-serif;
@@ -14,7 +15,7 @@
   canvas {
     border-radius: 4px;
     width: 100% !important;
-    height: 300px
+    height: 300px;
     margin: 0 auto;
   }
 
@@ -128,8 +129,8 @@
 
 @media screen and (max-width: 545px) {
   #bar-chart-ui {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   #bar-chart-ui {

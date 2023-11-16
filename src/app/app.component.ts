@@ -37,12 +37,12 @@ export class AppComponent implements OnInit {
     };
 
     options = {
-      responsive: false,
+      responsive: true,
       legend: {
         display: false,
       },
       layout: {
-        padding: 15,
+        padding: 5,
       },
       scales: {
         xAxes: [
@@ -88,8 +88,10 @@ export class AppComponent implements OnInit {
         this.dataArray.push(arr[key]);
       }
     }
+    
     if (arr != null && this.data != undefined) {
       this.data.datasets = this.dataArray;
+      console.log(this.dataArray)
       this.chart.update();
     }
   }
