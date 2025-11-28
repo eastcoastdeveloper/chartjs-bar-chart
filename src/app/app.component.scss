@@ -59,7 +59,7 @@
 
     .headers {
       display: grid;
-      grid-template-columns: repeat(3, 33.3%);
+      grid-template-columns: repeat(3, calc(33.3% - 15px));
       margin: 0 0 5px 45px;
 
       p {
@@ -85,14 +85,16 @@
 
       .labels {
         overflow: auto;
-        > div {
+        display: grid;
+        grid-template-columns: 30px calc(100% - 30px);
+        > div:first-child {
           float: left;
         }
-        > div + div {
+        > div + div > div {
           display: grid;
           grid-template-columns: repeat(3, 33.3%);
           width: calc(100% - 40px);
-          margin-left: 20px;
+          // margin-left: 20px;
         }
       }
     }
@@ -110,33 +112,5 @@
   #bar-chart-ui {
     margin-left: 5px;
     margin-right: 5px;
-  }
-
-  #bar-chart-ui {
-    .data-table {
-      .headers {
-        margin-left: 83px;
-        p {
-          font-size: 0.85em;
-        }
-      }
-
-      // .services {
-      //   table:first-child {
-      //     width: 75px;
-      //   }
-
-      //   table:last-child {
-      //     width: calc(100% - 75px);
-      //   }
-      //   table {
-      //     tr {
-      //       td {
-      //         white-space: nowrap;
-      //       }
-      //     }
-      //   }
-      // }
-    }
   }
 }
