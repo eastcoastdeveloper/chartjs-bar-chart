@@ -58,16 +58,16 @@
     border-radius: 4px;
 
     .headers {
-      overflow: auto;
-      margin-left: 115px;
-      padding: 5px 0 5px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 33.3%);
+      margin: 0 0 5px 45px;
 
       p {
         float: left;
         margin: 0;
         color: #313b3f;
         text-transform: uppercase;
-        font: normal 12px sans-serif;
+        font: 600 12px sans-serif;
       }
 
       p:first-child {
@@ -81,41 +81,19 @@
 
     .services {
       overflow: auto;
+      margin-left: 10px;
 
-      table {
-        color: #313b3f;
-        float: left;
-        border-collapse: collapse;
-
-        tr {
-          td:first-child {
-            padding-right: 20px;
-            width: 33.3%;
-          }
-
-          td:nth-child(2) {
-            width: 33.3%;
-          }
+      .labels {
+        overflow: auto;
+        > div {
+          float: left;
         }
-
-        td {
-          padding-top: 6px;
-          padding-bottom: 6px;
-          width: 33.3%;
-          padding-left: 10px;
+        > div + div {
+          display: grid;
+          grid-template-columns: repeat(3, 33.3%);
+          width: calc(100% - 40px);
+          margin-left: 20px;
         }
-
-        tr:nth-child(odd) {
-          background-color: lightgray;
-        }
-      }
-
-      table:first-child {
-        width: 115px;
-      }
-
-      table:last-child {
-        width: calc(100% - 115px);
       }
     }
   }
@@ -124,6 +102,7 @@
     background-color: #ffffff;
     margin: 10px auto 0 auto;
     overflow: hidden;
+    padding: 10px 0;
   }
 }
 
@@ -142,22 +121,22 @@
         }
       }
 
-      .services {
-        table:first-child {
-          width: 75px;
-        }
+      // .services {
+      //   table:first-child {
+      //     width: 75px;
+      //   }
 
-        table:last-child {
-          width: calc(100% - 75px);
-        }
-        table {
-          tr {
-            td {
-              white-space: nowrap;
-            }
-          }
-        }
-      }
+      //   table:last-child {
+      //     width: calc(100% - 75px);
+      //   }
+      //   table {
+      //     tr {
+      //       td {
+      //         white-space: nowrap;
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
 }

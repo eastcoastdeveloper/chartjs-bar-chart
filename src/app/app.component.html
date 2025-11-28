@@ -1,7 +1,3 @@
-<a class="website" href="https://frontenddevelopment.tech/" target="_blank"
-  >www.frontenddevelopment.tech</a
->
-
 <div id="bar-chart-ui">
   <p>{{ quarter }} Company Profit</p>
   <div class="filters">
@@ -45,12 +41,36 @@
         </div>
       </div>
       <div class="services">
-        <table class="labels">
+        <!-- <table class="labels">
           <tr *ngFor="let type of data.datasets">
             <td>{{ type.label }}</td>
           </tr>
-        </table>
-        <table>
+        </table> -->
+        <div class="labels">
+          <div>
+            <div *ngFor="let type of data.datasets">
+              <span>{{ type.label }}</span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span *ngFor="let goods of data.datasets[0].data"
+                >{{ goods }} u</span
+              >
+            </div>
+            <div>
+              <span *ngFor="let goods of data.datasets[1].data">
+                {{ goods }} hrs</span
+              >
+            </div>
+            <div>
+              <span *ngFor="let goods of data.datasets[2].data"
+                >{{ goods }} u</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- <table>
           <tbody>
             <tr>
               <td *ngFor="let goods of data.datasets[0].data">{{ goods }} u</td>
@@ -64,7 +84,7 @@
               <td *ngFor="let goods of data.datasets[2].data">{{ goods }} u</td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
       </div>
     </div>
   </div>
